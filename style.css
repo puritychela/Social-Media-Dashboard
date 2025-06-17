@@ -1,0 +1,184 @@
+/* Reset + base setup */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: hsl(230, 17%, 14%);
+  color: white;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: hsl(232, 19%, 15%);
+  border-bottom: 1px solid hsl(228, 28%, 20%);
+}
+
+.title h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.title p {
+  margin: 0;
+  color: hsl(228, 34%, 66%);
+  font-size: 0.875rem;
+}
+
+.theme-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: hsl(228, 34%, 66%);
+}
+
+/* Main Card Section */
+#stats-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.card {
+  background-color: hsl(228, 28%, 20%);
+  border-top: 4px solid hsl(208, 92%, 53%);
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.card-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  color: hsl(228, 34%, 66%);
+  font-weight: bold;
+}
+
+.card h2 {
+  font-size: 2.5rem;
+  margin: 0.2rem 0;
+}
+
+.card p {
+  margin: 0.2rem 0;
+  color: hsl(228, 34%, 66%);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.today {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: bold;
+}
+
+.today.up {
+  color: hsl(163, 72%, 41%);
+}
+
+.today.down {
+  color: hsl(356, 69%, 56%);
+}
+
+/* Overview Section */
+.overview-section {
+  padding: 2rem;
+}
+
+.overview-heading {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.overview-card {
+  background-color: hsl(228, 28%, 20%);
+  padding: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.overview-top,
+.overview-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.overview-top p,
+.overview-bottom h3 {
+  margin: 0;
+}
+
+.overview-bottom h3 {
+  font-size: 1.5rem;
+}
+
+.overview-bottom .today {
+  font-size: 0.875rem;
+}
+
+/* Dark mode toggle placeholder */
+input[type="checkbox"] {
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  appearance: none;
+  background-color: hsl(230, 22%, 74%);
+  position: relative;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: hsl(210, 78%, 56%);
+}
+
+input[type="checkbox"]:checked::before {
+  left: 20px;
+}
+
+input[type="checkbox"]::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: 0.3s;
+}
+body.dark {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+/* Optional: Invert card or section colors for visibility */
+.card, .overview-card, .overview-row {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark .card,
+body.dark .overview-card,
+body.dark .overview-row {
+  background-color: #252a41;
+  color: #ffffff;
+}
+
+
+
