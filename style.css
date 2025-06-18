@@ -179,6 +179,41 @@ body.dark .overview-row {
   background-color: #252a41;
   color: #ffffff;
 }
+.github-search {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.github-search input {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.github-search button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+#github-profile-container, #github-repos-container {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.github-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+.github-grid .card {
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  background-color: var(--card-bg, #fff);
+}
 
 
 
